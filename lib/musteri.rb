@@ -61,6 +61,13 @@ class Musteri
       musteriler
     end
 
+    def oda_bul oda_no
+      musteriler = aktif_musteriler
+      _musteri = nil
+      musteriler.each { |musteri| _musteri = musteri if musteri[2].to_i == oda_no }
+      _musteri
+    end
+
     def aktif_musteri_bul id
       arr = aktif_musteriler.select { |musteri| musteri[0].to_i == id }.first
       musteri = self.new
