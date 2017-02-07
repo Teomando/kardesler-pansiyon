@@ -62,7 +62,7 @@ class Musteri
     end
 
     def aktif_musteri_bul id
-      arr = aktif_musteriler .select { |musteri| musteri[0].to_i == id }.first
+      arr = aktif_musteriler.select { |musteri| musteri[0].to_i == id }.first
       musteri = self.new
       unless arr.nil?
         musteri.id = arr[0].to_i
