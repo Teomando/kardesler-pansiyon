@@ -64,7 +64,7 @@ class Musteri
     def oda_bul oda_no
       musteriler = aktif_musteriler
       _musteri = nil
-      musteriler.each { |musteri| _musteri = musteri if musteri[2].to_i == oda_no }
+      musteriler.each { |musteri| _musteri = musteri if musteri[2] == oda_no }
       _musteri
     end
 

@@ -11,6 +11,7 @@ def menu_goster
   puts "Boş odaları görmek için 4'ü ;"
   puts "Müşteri listesini görmek için 5'i ;"
   puts "Geçmiş müşteri listesini görmek için 6'yı ;"
+  puts "Hangi odada kimin kaldığını görmek için 7'yi ;"
   puts "Çıkış yapmak için 0'ı tuşlayınız"
   puts "****************************"
 end
@@ -59,6 +60,11 @@ loop do
     when "6"
       puts Musteri.pasif_musteriler
 
+    when "7"
+        puts"Oda numarası giriniz :"
+        oda_no = gets.chomp
+        puts Musteri.oda_bul(oda_no)[1]
+        
     when "0"
       break
   end
