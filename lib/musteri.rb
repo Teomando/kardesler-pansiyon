@@ -68,8 +68,8 @@ class Musteri
         musteri.id = arr[0].to_i
         musteri.adi_soyadi = arr[1]
         musteri.oda_no = arr[2]
-        musteri.giris_tarihi = Time.new arr[3]
-        musteri.cikis_tarihi = Time.new arr[4]
+        musteri.giris_tarihi = arr[3]
+        musteri.cikis_tarihi = arr[4]
       end
       musteri
     end
